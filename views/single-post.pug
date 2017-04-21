@@ -5,6 +5,7 @@ block title
     title Hello, Nerds
 
 block content
+
     .header
           img(src="/static/redditlogo.png",s height='60', width='60')
     
@@ -23,7 +24,15 @@ block content
                         span  in 
                         a(href="/r/" + post.subreddit.name) /r/#{post.subreddit.name}
                         p Score: #{post.voteScore} Upvotes: #{post.numUpvotes} Downvotes: #{post.numDownvotes}
-    
+            form(action='/createComment', method='POST')
+              p
+                input(type='hidden', name='postId', value=postId)
+                input(type='hidden', name='userId', value=postId)
+                |  Add a comment: 
+              p
+                textarea(type='text', name='text')
+              p
+                button(type='submit') Submit
                 #comment
                     each comment in comments
                       ul
