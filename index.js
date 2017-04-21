@@ -182,7 +182,7 @@ app.get('/post/:postId', function(request, response) {
     return Promise.all([myReddit.getSinglePost(request.params.postId), myReddit.getCommentsForPost(request.params.postId)])
     .then(results => { // array of future values that we gave to promise.all
     console.log(results)
-        response.render('single-post', {post:results[0], comments:results[1]})
+        response.render('single-post', {post:results[0], comments:results[1], postId:request.params.postId, userId:request.loggedInUser.id})
         })
         .catch(function(error) {
             response.status(404).send('404 WHERE AM I !?!.')
@@ -254,19 +254,21 @@ app.post('/createPost', onlyLoggedIn, function(request, response) {
 //         })
 
 // });
-// // POST handler for form submissions creating a new comment
-// app.post('/createComment', onlyLoggedIn, function(request, response) {
-//     return myReddit.createComment({
-//             userId: request.loggedInUser.id,
-//             postId: request.params.postId,
-//             text: request.body.text
-//         })
+// POST handler for form submissions creating a new comment
+app.post('/createComment', onlyLoggedIn, function(request, response) {
+    console.log(request.body.text);
+    console.log("HARHARHAR");
+    return myReddit.createComment({
+            userId: request.loggedInUser.id,
+            postId: request.body.postId,
+            text: request.body.text
+        })
             
-//         .then(result => {
-//             response.redirect('/Post/77');
-//         })
+        .then(result => {
+            response.redirect('/post/'+ request.body.postId);
+        })
 
-//     });
+    });
 
 
 // Listen
