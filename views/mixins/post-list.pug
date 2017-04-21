@@ -10,6 +10,8 @@ mixin postList(posts)
                         span  in
                         a(class="mainListOne")(href="/r/" + post.subreddit.name) /r/#{post.subreddit.name}
                     p(class="postScore") Score: #{post.voteScore} Upvotes: #{post.numUpvotes} Downvotes: #{post.numDownvotes}
+                    p 
+                        a(class="mainListOne")(href="/post/"+post.id) View Comments
                     div(class="clear")
                     
                     form(action='/vote', method='post')
