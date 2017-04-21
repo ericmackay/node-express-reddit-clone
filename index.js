@@ -115,7 +115,14 @@ app.get('/subreddits', function(request, response) {
 
     response.send("TO BE IMPLEMENTED");
 });
-
+app.get('/u/:username', function(request, response) {
+    
+    myReddit.getAllPostsForUsername(request.params.username)
+    .then(posts =>{
+        response.render('homepage', {posts: posts})
+    })
+    
+});
 // Subreddit homepage, similar to the regular home page but filtered by sub.
 app.get('/r/:subreddit', function(request, response) {
     //Call getSubredditByName from the app.get handler, and pass it the request.params.subreddit. 
