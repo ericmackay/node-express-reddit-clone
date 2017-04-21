@@ -5,7 +5,18 @@ module.exports = function(myReddit) {
     
     authController.get('/login', function(request, response) {
         response.render('login-form', {});
-    });        
+    });     
+    
+    authController.get('/logout', function(request, response) {
+        var cookie = request.cookies;
+        for (var prop in cookie) {
+            if (!cookie.hasOwnProperty(prop)){
+                continue;
+            }
+            response.cookie(prop, '', {expires: new Date(0)});
+        }
+        response.redirect('/');
+    });    
     
     authController.post('/login', function(request, response) {
     
