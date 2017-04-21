@@ -5,9 +5,9 @@ block content
             img(src="/static/redditlogo.png", height='60', width='60')
           p RECOVER PASSWORD
             form(action='/auth/createResetToken', method='POST')
-          p
-            |  Email: 
-            input(type='email', name='email')
-        
-          p
-            button(type='submit') RECOVER
+              p
+                |  Email: 
+                input(type='email', name='email')
+            
+              p
+                button(type='submit') RECOVER

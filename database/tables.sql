@@ -15,8 +15,6 @@ CREATE TABLE users (
   UNIQUE KEY username (username)
 );
 
-ALTER TABLE users ADD COLUMN email VARCHAR(100) UNIQUE;
-
 CREATE TABLE sessions (
   id INT AUTO_INCREMENT PRIMARY KEY,
   userId INT,
@@ -81,3 +79,5 @@ CREATE TABLE passwordResetTokens (
   token VARCHAR(100),
   UNIQUE KEY token (token)
 );
+
+ALTER TABLE users ADD COLUMN email VARCHAR(100) UNIQUE;

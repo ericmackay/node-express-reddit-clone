@@ -98,6 +98,7 @@ app.get('/', function(request, response) {
     myReddit.getAllPosts({})
 
         .then(function(posts) {
+            // console.log(posts)
             response.render('homepage', {
                 posts: posts
             });
@@ -246,7 +247,8 @@ app.post('/createPost', onlyLoggedIn, function(request, response) {
         subredditId: request.body.subredditId
         })
         .then(result => {
-            response.redirect('/post/postId');
+            console.log('hahaha');
+            response.redirect('/');
         })
 });
 

@@ -3,15 +3,15 @@ mixin postList(posts)
         each post in posts
             ul(class="liststyle").post
                 h2
-                    img(src="/static/post.png")
-                    a(class="postTitle")(href=post.url, target="_blank")= post.title
+                    img(src="/static/postsmall.png" height='60', width='60')
+                    a(class="postTitle" href=post.url, target="_blank")= post.title
                     h4 Submitted by 
-                        a(class="mainListLinkTwo")(href="/u/" + post.user.username)= post.user.username
+                        a(class="mainListLinkTwo" href="/u/" + post.user.username)= post.user.username
                         span  in 
-                        a(class="mainListOne")(href="/r/" + post.subreddit.name) /r/ #{post.subreddit.name}
+                        a(class="mainListOne" href="/r/" + post.subreddit.name) /r/ #{post.subreddit.name}
                     p(class="postScore") Score: #{post.voteScore} Upvotes: #{post.numUpvotes} Downvotes: #{post.numDownvotes}
                     p 
-                        a(class="mainListOne")(href="/post/"+post.id) View Comments
+                        a(class="mainListOne" href="/post/"+post.id) View Comments
                     div(class="clear")
                     form(action='/vote', method='post')
                       input(type='hidden', name='postId', value=post.id)

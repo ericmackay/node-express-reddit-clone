@@ -1,20 +1,30 @@
-extends layout.pug
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        link(rel="stylesheet", href="/static/app.css")
+        block title
 
-block content
-  h1 Share a new link!
-  form(method='POST', action='/createPost')
-    p
-      | Subreddit: 
-      select(name='subredditId')
-        each subreddit in subredditOptions
-          option(value=`${subreddit.id}`) #{subreddit.name}
-    p
-      | URL: 
-      input(type='text', name='url')
-    p
-      | Title: 
-      input(type='text', name='title')
-      
-    p
-      button(class='button') Submit Post
+            title Create Post
+        block content
+            
+            .loginbox
+                  p
+                    img(src="/static/redditlogo.png", height='60', width='60')
+
+                    form(method='POST', action='/createPost')
+                      p
+                        | Subreddit: 
+                        select(name='subredditId')
+                          each subreddit in subredditOptions
+                            option(value=`${subreddit.id}`) #{subreddit.name}
+                      p
+                        | URL: 
+                        input(type='text', name='url')
+                      p
+                        | Title: 
+                        input(type='text', name='title')
+        
+                      p
+                        button(type='submit') Submit Post
     
