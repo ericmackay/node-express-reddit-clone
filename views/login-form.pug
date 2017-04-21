@@ -4,10 +4,12 @@ html
         meta(charset="utf-8")
         link(rel="stylesheet", href="/static/app.css")
         block title
-            title Redit Clone
-    body
-        main
-            block content
+            title Login
+        block content
+            
+            .loginbox
+                 p
+                   img(src="/static/redditlogo.png", height='60', width='60')
                  p Login
                  form(action='/auth/login', method='POST')
                   p
@@ -17,6 +19,5 @@ html
                     |  Password: 
                     input(type='password', name='password')
                   p
-                    button(type='submit') Login!  
+                    button(type='submit2') Login!  
                     
-        footer &copy; 2017 bruh

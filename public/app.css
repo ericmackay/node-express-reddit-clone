@@ -1,27 +1,35 @@
-* {
-    box-sizing: border-box;
-}
+/** {*/
+/*    box-sizing: border-box;*/
+/*}*/
 body {
     font-family: Helvetica, arial, sans-serif;
-    background-color: white;
-    margin: 0;
-    padding: 0;
+    background-color: #c6d7c7;
     height: 100%;
     width: 100%;
 }
+a {
+    color: #112378;;
+    text-decoration: none;
+}
+
+h4{
+    color: #112378;
+}
 .topnav {
     overflow: hidden;
-    background-color: #f5af07;
+    background-color: #CB6B6A;
 }
 .topnav a {
+
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: #FFFFFF;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 14pt;
 }
+
 .topnav a:hover {
     background-color: white;
     color: black;
@@ -37,15 +45,13 @@ body {
   }
 }
 
-
 .title {
     font-size: 12pt;
     text-align: left;
 }
 .link {
     text-decoration: none;
-    margin: 0;
-    padding: 0;
+
 }
 .maintitle {
     text-align: center;
@@ -62,44 +68,138 @@ body {
     border-color: grey;
     list-style: circle;
     text-decoration: none;
-    margin: 0;
-    border-spacing: 0;
     color: black;
 }
 .mainlist h2 {
     display: inline-table;
     text-align: -webkit-match-parent;
-    color: black;
+    color: #FFFFFF;
     font-size: 14pt;
     text-decoration: none;
     width: 60%;
 }
 .mainListLinkTwo {
-    color: #afafaf;
+    color: #FFFFFF;
     text-decoration: none;
 }
 .mainListOne {
-    color: #afafaf;
+    color: #112378;;
     text-decoration: none;
 }
 .postScore {
     font-size: 10pt;
-    color: black;
-    margin-left: 170px;
+    color: #112378;
 }
 .postTitle {
-    font-size: 18pt;
+    font-size: 14pt;
     text-decoration: none;
-    color: #f5af07;
+    color: #112378;
     float: inherit;
 }
 .postTitle:hover{
-    text-decoration: underline;
+    color: #112378;;
+}
+
+.signup{
+   width: 220px;
+   height: 275px;
+   background-color: #CB6B6A;
+   color: #FFFFFF;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   padding: 20px;
+}
+
+.login{
+   width: 250px;
+   height: 240px;
+   background-color: #CB6B6A;
+   color: #FFFFFF;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+}
+
+.loginbox{
+   width: 250px;
+   height: 250px;
+   background-color: #CB6B6A;
+   color: #FFFFFF;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+}
+.password{
+   width: 250px;
+   height: 210px;
+   background-color: #CB6B6A;
+   color: #FFFFFF;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+}
+
+.header{
+    text-align: center;
+    color: #FFFFFF;
+    
+}
+.imageheader{
+   width: 250px;    
+   background-color: #Cb6B6A;
+   position: fixed;
+   top: 30%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
 }
 ul img {
     float: left;
-    padding-right: 20px;
+    padding-right: 10px;
 }
 .clear {
     clear: both;
+}
+
+input[type=text] {
+    width: 100px;
+    border: none;
+}
+
+input[type=password] {
+    width: 100px;
+    border: none;
+}
+
+button[type=submit2] {
+    background-color: #FFFFFF;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);/* Green */
+    border: none;
+    color: #CCCCCC;
+    padding: 5px 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+}
+button[type=submit] {
+    background-color: #FFFFFF;
+    border: none;
+    color: #CCCCCC;
+    padding: 5px 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
 }

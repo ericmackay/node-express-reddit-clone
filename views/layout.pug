@@ -11,36 +11,17 @@ html
     body
         header
             if loggedInUser
-<<<<<<< HEAD
-                p Welcome #{loggedInUser.username} 
-                
                 ul
-                    li
-                        a(href="/createpost") 
-                        button(type='button') Create Post
-                    li
-                        a(href='/sort/hot')
-                         button(type='button') Hot Posts
-                    li 
-                        a(href='/sort/top')
-                         button(type='button') Top Posts
-                 
-=======
-                ul
-                    li
+                    p
                         p(class="title") Welcome #{loggedInUser.username}
-                    li
+                    p
                         a(class="link")(href="/createpost") Create Post
-                    li
+                    p
                         a(href="/auth/logout") logout
                 
->>>>>>> af0d72705339bc878746dd2ca686bd0bbe01e3db
             else
-                ul
-                    li
-                        a(href="/auth/signup") Signup
-                    li
+                    .signups
+                        a(href="/auth/signup") Signup 
                         a(href="/auth/login") Login
         main
             block content
-        footer &copy; 2017 bruh

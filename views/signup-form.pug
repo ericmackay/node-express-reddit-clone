@@ -1,15 +1,25 @@
-extends layout.pug
-block content
- h1 Signup
- form(action='/auth/signup', method='POST')
-  p
-    |  Username: 
-    input(type='text', name='username')
-  p
-    |  Email: 
-    input(type='email', name='email')
-  p
-    |  Password: 
-    input(type='password', name='password')
-  p
-    button(type='submit') Signup!
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        link(rel="stylesheet", href="/static/app.css")
+        block title
+            title Sign Up 
+        block content
+
+            .signup       
+                  p
+                   img(src="/static/redditlogo.png", height='60', width='60')
+                  p CREATE PROFILE
+                   form(action='/auth/signup', method='POST')
+                    p
+                      |  USERNAME: 
+                      input(type='text', name='username')
+                    p
+                      |  EMAIL: 
+                      input(type='email', name='email')
+                    p
+                      |  PASSWORD: 
+                      input(type='password', name='password')
+                    p
+                      button(type='submit2') Sign Up!
