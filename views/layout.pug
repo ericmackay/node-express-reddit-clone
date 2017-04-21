@@ -7,10 +7,25 @@ html
         meta(name="viewport" content="width=device-width, initial-scale=1")
         link(rel="stylesheet" type="text/css" href="bootstrap.min.css")
         block title
-            title Redit Clone
+            title Hello, Nerds
     body
         header
             if loggedInUser
+<<<<<<< HEAD
+                p Welcome #{loggedInUser.username} 
+                
+                ul
+                    li
+                        a(href="/createpost") 
+                        button(type='button') Create Post
+                    li
+                        a(href='/sort/hot')
+                         button(type='button') Hot Posts
+                    li 
+                        a(href='/sort/top')
+                         button(type='button') Top Posts
+                 
+=======
                 ul
                     li
                         p(class="title") Welcome #{loggedInUser.username}
@@ -19,6 +34,7 @@ html
                     li
                         a(href="/auth/logout") logout
                 
+>>>>>>> af0d72705339bc878746dd2ca686bd0bbe01e3db
             else
                 ul
                     li
