@@ -6,6 +6,7 @@ body {
     background-color: #c6d7c7;
     height: 100%;
     width: 100%;
+    color: #112378;
 }
 a {
     color: #112378;;
@@ -68,7 +69,7 @@ h4{
     border-color: grey;
     list-style: circle;
     text-decoration: none;
-    color: black;
+    color: #112378
 }
 .mainlist h2 {
     display: inline-table;
@@ -127,7 +128,7 @@ h4{
 
 .loginbox{
    width: 250px;
-   height: 250px;
+   height: 280px;
    background-color: #CB6B6A;
    color: #FFFFFF;
    position: fixed;
