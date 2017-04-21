@@ -36,8 +36,19 @@ body {
     display: block;
   }
 }
-
-
+.removeDotOne {
+    list-style-type: none;
+    margin: 0;
+}
+.removeLine {
+    text-decoration: none;
+}
+.removeLine:hover {
+    text-decoration: underline;
+}
+.createLine:hover{
+    text-decoration: underline;
+}
 .title {
     font-size: 12pt;
     text-align: left;
