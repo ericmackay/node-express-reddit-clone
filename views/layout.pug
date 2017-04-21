@@ -3,11 +3,15 @@ html
     head
         meta(charset="utf-8")
         link(rel="stylesheet", href="/static/app.css")
+        link(rel="shortcut icon" type="image/png" href="/static/Reddit-icon.png")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" type="text/css" href="bootstrap.min.css")
         block title
             title Hello, Nerds
     body
         header
             if loggedInUser
+<<<<<<< HEAD
                 p Welcome #{loggedInUser.username} 
                 
                 ul
@@ -21,6 +25,16 @@ html
                         a(href='/sort/top')
                          button(type='button') Top Posts
                  
+=======
+                ul
+                    li
+                        p(class="title") Welcome #{loggedInUser.username}
+                    li
+                        a(class="link")(href="/createpost") Create Post
+                    li
+                        a(href="/auth/logout") logout
+                
+>>>>>>> af0d72705339bc878746dd2ca686bd0bbe01e3db
             else
                 ul
                     li
