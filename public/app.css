@@ -1,20 +1,33 @@
+
 body {
     font-family: Helvetica, arial, sans-serif;
+    color: #ffffff;
     background-color: #F1D3D3;
-    width: 750px;
+    width: 100%;
+    margin: 25px;
+}
+    
 
 header {
+    position: absolute; 
+    left: 0px;
+    top: 0px;
     background-color: #F1D3D3;
-    position: fixed;
-}
+    height: 100px;
+    width: 100%;
+} 
 
+li{
+    display: inline;
+}
 h1 {
     background-color: #f1D3D3;
 }
 a {
-  color: #0071d8;
+  color: #CABCB9;
   text-decoration: none;
   border-bottom: 1px solid; }
+  
   
 ul {
   list-style: none;
@@ -28,7 +41,7 @@ button {
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 5px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -52,4 +65,12 @@ select {
     border: none;
     border-radius: 4px;
     background-color: #3CBC8D;
+}
+
+#post_list{
+    font-family: Helvetica, arial, sans-serif;
+    background-color: #F1D3D3;
+    width: 100%;
+    padding-top:5%;
+    margin: 5%;
 }

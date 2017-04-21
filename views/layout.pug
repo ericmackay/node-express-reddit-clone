@@ -4,14 +4,23 @@ html
         meta(charset="utf-8")
         link(rel="stylesheet", href="/static/app.css")
         block title
-            title Redit Clone
+            title Hello, Nerds
     body
         header
             if loggedInUser
-                p Welcome #{loggedInUser.username}
-                 a(href="/createpost") Create Post
-                 a(href='/sort/hot') hot 
-                 a(href='/sort/top') top
+                p Welcome #{loggedInUser.username} 
+                
+                ul
+                    li
+                        a(href="/createpost") 
+                        button(type='button') Create Post
+                    li
+                        a(href='/sort/hot')
+                         button(type='button') Hot Posts
+                    li 
+                        a(href='/sort/top')
+                         button(type='button') Top Posts
+                 
             else
                 ul
                     li
